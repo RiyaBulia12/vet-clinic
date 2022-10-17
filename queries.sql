@@ -4,7 +4,7 @@
 SELECT * FROM animals WHERE name like '%mon';
 
 --List the name of all animals born between 2016 and 2019.
-SELECT * FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-31';
+SELECT * FROM animals WHERE extract(YEAR FROM date_of_birth) BETWEEN '2016' AND '2019';
 
 -- List the name of all animals that are neutered and have less than 3 escape attempts.
 SELECT * FROM animals WHERE neutered=true AND escape_attempts>3;
@@ -106,3 +106,21 @@ SELECT species, MIN(weight_kg) AS MIN_WEIGHT, MAX(weight_kg) AS MAX_WEIGHT FROM 
 
 -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 SELECT species, AVG(escape_attempts) AS AVG_ESCAPE_ATTEMPTS FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species ;
+
+
+/* Write queries (using JOIN) to answer the following questions:
+   What animals belong to Melody Pond?*/
+SELECT *  FROM animals WHERE
+
+/* List of all animals that are pokemon (their type is Pokemon).*/
+
+/* List all owners and their animals, remember to include those that don't own any animal.*/
+
+/* How many animals are there per species?*/
+
+/* List all Digimon owned by Jennifer Orwell.*/
+
+/* List all animals owned by Dean Winchester that haven't tried to escape.*/
+
+/* Who owns the most animals?*/
+
