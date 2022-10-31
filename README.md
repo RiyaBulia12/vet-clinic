@@ -20,6 +20,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@RiyaBulia12](https://github.com/RiyaBulia12)
 - LinkedIn: [Riya-Bulia](https://linkedin.com/in/riya-bulia)
 
+👤 **Shaquille Ndunda**
+
+- GitHub: [@shaqdeff](https://github.com/shaqdeff)
+- Twitter: [@shaquillendunda](https://twitter.com/shaquillendunda)
+- LinkedIn: [Shaquille Ndunda](https://www.linkedin.com/in/shaquille-ndunda-b13a95107/)
 
 ## 🤝 Contributing
 
