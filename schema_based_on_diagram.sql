@@ -15,7 +15,7 @@ CREATE TABLE invoices(
 CREATE TABLE medical_histories(
    id SERIAL PRIMARY KEY,
    admitted_at TIMESTAMP,
-   patient_id INT REFERENCES  patients(id),
+   patient_id INT REFERENCES patients(id),
    status VARCHAR(50));
 
 CREATE TABLE treatments (
@@ -32,3 +32,7 @@ CREATE TABLE invoice_items (
    invoice_id INT REFERENCES invoices(id),
    treatment_id INT REFERENCES treatments(id),
 );
+
+CREATE INDEX medical_histories_idx ON medical_histories(patient_id);
+CREATE INDEX invoice_id_idx ON invoice_items(invoice_id);
+CREATE INDEX treatment_id_idx ON invoice_items(treatment_id);
