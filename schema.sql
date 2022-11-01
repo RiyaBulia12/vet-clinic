@@ -65,3 +65,8 @@ and one vet can be visited by multiple animals.
 Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit. */
 
 CREATE TABLE visits(vets_id INT REFERENCES vets(id), animal_id INT REFERENCES animals(id), visit_date DATE );
+
+-- Improve execution time of queries.
+CREATE INDEX animal_id_index ON visits(animal_id);
+CREATE INDEX vets_id_idx ON visits(vets_id desc);
+CREATE INDEX email_idx ON owners(email);
