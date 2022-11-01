@@ -17,3 +17,18 @@ CREATE TABLE medical_histories(
    admitted_at TIMESTAMP,
    patient_id INT REFERENCES  patients(id),
    status VARCHAR(50));
+
+CREATE TABLE treatments (
+   id SERIAL PRIMARY KEY,
+   type VARCHAR(50),
+   name VARCHAR(50),
+)
+
+CREATE TABLE invoice_items (
+   id SERIAL PRIMARY KEY,
+   unit_price DECIMAL,
+   quantity INT,
+   total_price DECIMAL,
+   invoice_id INT REFERENCES invoices(id),
+   treatment_id INT REFERENCES treatments(id),
+);
